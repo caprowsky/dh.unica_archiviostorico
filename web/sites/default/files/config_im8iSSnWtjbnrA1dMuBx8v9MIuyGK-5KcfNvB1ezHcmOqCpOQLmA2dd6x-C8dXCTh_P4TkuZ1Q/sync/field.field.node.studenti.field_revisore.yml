@@ -1,0 +1,19 @@
+uuid: 11d74532-ad49-4685-90a1-55e629c51cc0
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_revisore
+    - node.type.studenti
+id: node.studenti.field_revisore
+field_name: field_revisore
+entity_type: node
+bundle: studenti
+label: Revisore
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

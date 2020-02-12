@@ -1,0 +1,19 @@
+uuid: cdc68e43-c0fd-4cfe-96de-67549131c2d2
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_data_laurea
+    - node.type.studenti
+id: node.studenti.field_data_laurea
+field_name: field_data_laurea
+entity_type: node
+bundle: studenti
+label: 'Data laurea'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

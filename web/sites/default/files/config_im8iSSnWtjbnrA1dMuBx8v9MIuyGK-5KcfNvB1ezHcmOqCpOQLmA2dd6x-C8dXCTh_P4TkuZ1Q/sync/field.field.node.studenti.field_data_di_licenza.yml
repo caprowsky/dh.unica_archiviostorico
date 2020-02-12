@@ -1,0 +1,19 @@
+uuid: c9064127-57f8-4c96-9e9a-f2fcd79a1561
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_data_di_licenza
+    - node.type.studenti
+id: node.studenti.field_data_di_licenza
+field_name: field_data_di_licenza
+entity_type: node
+bundle: studenti
+label: 'Data di licenza'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

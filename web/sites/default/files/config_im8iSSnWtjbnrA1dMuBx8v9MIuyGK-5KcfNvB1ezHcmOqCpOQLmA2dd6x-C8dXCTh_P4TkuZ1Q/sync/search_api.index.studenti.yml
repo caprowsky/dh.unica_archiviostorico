@@ -1,0 +1,247 @@
+uuid: 3ff0762f-e916-4421-84fd-8375078e3248
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_anno_immatricolazione
+    - field.storage.node.field_autore
+    - field.storage.node.field_carriera
+    - field.storage.node.field_cognome
+    - field.storage.node.field_corso
+    - field.storage.node.field_data_di_licenza
+    - field.storage.node.field_data_di_nascita
+    - field.storage.node.field_data_laurea
+    - field.storage.node.field_facolta
+    - field.storage.node.field_geo
+    - field.storage.node.field_nome
+    - field.storage.node.field_provenienza
+    - field.storage.node.field_revisore
+    - field.storage.node.field_segnatura_archivistica_lau
+    - field.storage.node.field_segnatura_archivistica_tes
+    - field.storage.node.field_titolo_tesi_licenza
+    - field.storage.node.field_titolo_tesi_laurea
+    - field.storage.node.field_votazione_laurea
+    - search_api.server.studenti
+  module:
+    - search_api
+    - node
+    - path_alias
+id: studenti
+name: studenti
+description: ''
+read_only: false
+field_settings:
+  field_anno_immatricolazione:
+    label: 'Anno immatricolazione'
+    datasource_id: 'entity:node'
+    property_path: field_anno_immatricolazione
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_anno_immatricolazione
+  field_autore:
+    label: Autore
+    datasource_id: 'entity:node'
+    property_path: field_autore
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_autore
+  field_carriera:
+    label: Carriera
+    datasource_id: 'entity:node'
+    property_path: field_carriera
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_carriera
+  field_cognome:
+    label: Cognome
+    datasource_id: 'entity:node'
+    property_path: field_cognome
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_cognome
+  field_corso:
+    label: Corso
+    datasource_id: 'entity:node'
+    property_path: field_corso
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_corso
+  field_data_di_licenza:
+    label: 'Data di licenza'
+    datasource_id: 'entity:node'
+    property_path: field_data_di_licenza
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_data_di_licenza
+  field_data_di_nascita:
+    label: 'Data di nascita'
+    datasource_id: 'entity:node'
+    property_path: field_data_di_nascita
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_data_di_nascita
+  field_data_laurea:
+    label: 'Data laurea'
+    datasource_id: 'entity:node'
+    property_path: field_data_laurea
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_data_laurea
+  field_facolta:
+    label: Facoltà
+    datasource_id: 'entity:node'
+    property_path: field_facolta
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_facolta
+  field_geo:
+    label: Geo
+    datasource_id: 'entity:node'
+    property_path: field_geo
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_geo
+  field_nome:
+    label: Nome
+    datasource_id: 'entity:node'
+    property_path: field_nome
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_nome
+  field_provenienza:
+    label: Provenienza
+    datasource_id: 'entity:node'
+    property_path: field_provenienza
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_provenienza
+  field_revisore:
+    label: Revisore
+    datasource_id: 'entity:node'
+    property_path: field_revisore
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_revisore
+  field_segnatura_archivistica_lau:
+    label: 'Segnatura archivistica tesi laurea'
+    datasource_id: 'entity:node'
+    property_path: field_segnatura_archivistica_lau
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_segnatura_archivistica_lau
+  field_segnatura_archivistica_tes:
+    label: 'Segnatura archivistica tesi licenza'
+    datasource_id: 'entity:node'
+    property_path: field_segnatura_archivistica_tes
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_segnatura_archivistica_tes
+  field_titolo_tesi_laurea:
+    label: 'Titolo tesi laurea'
+    datasource_id: 'entity:node'
+    property_path: field_titolo_tesi_laurea
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_titolo_tesi_laurea
+  field_titolo_tesi_licenza:
+    label: 'Titolo tesi di licenza'
+    datasource_id: 'entity:node'
+    property_path: field_titolo_tesi_licenza
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_titolo_tesi_licenza
+  field_votazione_laurea:
+    label: 'Votazione laurea'
+    datasource_id: 'entity:node'
+    property_path: field_votazione_laurea
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_votazione_laurea
+  url:
+    label: URI
+    property_path: search_api_url
+    type: text
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - studenti
+    languages:
+      default: false
+      selected:
+        - it
+  'entity:path_alias': {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  highlight:
+    highlight: always
+    highlight_partial: false
+    excerpt: true
+    excerpt_length: 256
+    exclude_fields:
+      - field_autore
+      - field_carriera
+      - field_data_di_licenza
+      - field_data_laurea
+      - field_geo
+      - field_revisore
+    prefix: '<strong>'
+    suffix: '</strong>'
+    weights:
+      postprocess_query: 0
+  ignorecase:
+    all_fields: false
+    fields:
+      - field_cognome
+      - field_nome
+    weights:
+      preprocess_index: -50
+      preprocess_query: -20
+  language_with_fallback: {  }
+  rendered_item: {  }
+  tokenizer:
+    all_fields: false
+    fields:
+      - field_cognome
+      - field_nome
+    spaces: ''
+    overlap_cjk: 1
+    minimum_word_size: '3'
+    weights:
+      preprocess_index: -46
+      preprocess_query: -6
+  transliteration:
+    all_fields: false
+    fields:
+      - field_cognome
+      - field_nome
+    weights:
+      preprocess_index: -49
+      preprocess_query: -20
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+server: studenti

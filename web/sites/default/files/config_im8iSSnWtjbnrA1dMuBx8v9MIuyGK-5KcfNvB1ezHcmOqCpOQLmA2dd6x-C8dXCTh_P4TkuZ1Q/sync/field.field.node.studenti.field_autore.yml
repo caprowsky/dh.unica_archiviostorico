@@ -1,0 +1,19 @@
+uuid: 456bcb01-d3bc-4a7d-a0ec-04f6cc7d3df4
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_autore
+    - node.type.studenti
+id: node.studenti.field_autore
+field_name: field_autore
+entity_type: node
+bundle: studenti
+label: Autore
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,31 @@
+uuid: ac98c251-3370-49c6-8c51-b112bedaa355
+langcode: it
+status: true
+dependencies:
+  config:
+    - search_api.index.studenti
+    - views.view.cerca_studenti
+  module:
+    - views
+    - search_api_autocomplete
+id: cerca_studenti
+label: 'cerca studenti'
+index_id: studenti
+suggester_settings:
+  server:
+    fields: {  }
+suggester_weights:
+  server: 0
+suggester_limits: {  }
+search_settings:
+  'views:cerca_studenti':
+    displays:
+      default: true
+      selected: {  }
+options:
+  limit: 10
+  min_length: 1
+  show_count: true
+  autosubmit: true
+  submit_button_selector: ':submit'
+  delay: null

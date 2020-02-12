@@ -1,0 +1,21 @@
+uuid: 07c71541-843b-46ae-aa8f-a57918f6ed21
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_data_di_nascita
+    - node.type.studenti
+  module:
+    - datetime
+id: node.studenti.field_data_di_nascita
+field_name: field_data_di_nascita
+entity_type: node
+bundle: studenti
+label: 'Data di nascita'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

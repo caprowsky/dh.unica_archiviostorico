@@ -1,0 +1,19 @@
+uuid: 7d1ae5f9-256c-4c65-ad4f-d9850c412267
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_segnatura_archivistica_lau
+    - node.type.studenti
+id: node.studenti.field_segnatura_archivistica_lau
+field_name: field_segnatura_archivistica_lau
+entity_type: node
+bundle: studenti
+label: 'Segnatura archivistica tesi laurea'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

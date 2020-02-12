@@ -1,0 +1,18 @@
+uuid: 18ba2798-dc57-4caa-a70e-4f1e74809461
+langcode: it
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Studenti
+type: studenti
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

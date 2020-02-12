@@ -1,0 +1,19 @@
+uuid: 0ab2658d-b8fb-4c05-af60-1490b1c24d51
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_corso
+    - node.type.studenti
+id: node.studenti.field_corso
+field_name: field_corso
+entity_type: node
+bundle: studenti
+label: Corso
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

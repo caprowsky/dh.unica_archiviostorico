@@ -1,0 +1,19 @@
+uuid: fafc11aa-0361-4d54-8281-fc9dbd0d9050
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_carriera
+    - node.type.studenti
+id: node.studenti.field_carriera
+field_name: field_carriera
+entity_type: node
+bundle: studenti
+label: Carriera
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

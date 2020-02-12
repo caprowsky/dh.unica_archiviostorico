@@ -1,0 +1,41 @@
+uuid: 27c1dceb-40fa-41e4-b441-63f15431b3d8
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_geo
+    - node.type.studenti
+  module:
+    - geocoder_field
+    - geofield
+third_party_settings:
+  geocoder_field:
+    method: source
+    weight: 0
+    geocode_field: field_provenienza
+    reverse_geocode_field: ''
+    skip_not_empty_value: 0
+    disabled: false
+    hidden: false
+    plugins:
+      - freegeoip
+      - openstreetmap
+    dumper: wkt
+    delta_handling: default
+    failure:
+      handling: preserve
+      status_message: true
+      log: true
+id: node.studenti.field_geo
+field_name: field_geo
+entity_type: node
+bundle: studenti
+label: Geo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  backend: geofield_backend_default
+field_type: geofield

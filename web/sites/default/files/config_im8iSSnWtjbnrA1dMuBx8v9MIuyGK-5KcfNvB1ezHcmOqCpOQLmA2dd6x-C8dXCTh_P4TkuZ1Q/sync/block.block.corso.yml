@@ -1,0 +1,23 @@
+uuid: 38204e46-a5f7-495a-aca6-62f67b9f3f1e
+langcode: it
+status: true
+dependencies:
+  config:
+    - facets.facet.corso
+  module:
+    - facets
+  theme:
+    - bartik
+id: corso
+theme: bartik
+region: sidebar_second
+weight: -6
+provider: null
+plugin: 'facet_block:corso'
+settings:
+  id: 'facet_block:corso'
+  label: Corso
+  provider: facets
+  label_display: visible
+  block_id: corso
+visibility: {  }

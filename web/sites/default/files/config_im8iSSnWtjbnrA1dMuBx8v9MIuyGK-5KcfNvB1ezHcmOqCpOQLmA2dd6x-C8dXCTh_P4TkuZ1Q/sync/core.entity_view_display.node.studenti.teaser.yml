@@ -1,0 +1,58 @@
+uuid: c37aae7e-f5d8-42ff-8b61-cadfcdbd64dd
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.studenti.field_anno_immatricolazione
+    - field.field.node.studenti.field_autore
+    - field.field.node.studenti.field_carriera
+    - field.field.node.studenti.field_cognome
+    - field.field.node.studenti.field_corso
+    - field.field.node.studenti.field_data_di_licenza
+    - field.field.node.studenti.field_data_di_nascita
+    - field.field.node.studenti.field_data_laurea
+    - field.field.node.studenti.field_facolta
+    - field.field.node.studenti.field_geo
+    - field.field.node.studenti.field_nome
+    - field.field.node.studenti.field_provenienza
+    - field.field.node.studenti.field_revisore
+    - field.field.node.studenti.field_segnatura_archivistica_lau
+    - field.field.node.studenti.field_segnatura_archivistica_tes
+    - field.field.node.studenti.field_titolo_tesi_laurea
+    - field.field.node.studenti.field_titolo_tesi_licenza
+    - field.field.node.studenti.field_votazione_laurea
+    - node.type.studenti
+  module:
+    - user
+id: node.studenti.teaser
+targetEntityType: node
+bundle: studenti
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_anno_immatricolazione: true
+  field_autore: true
+  field_carriera: true
+  field_cognome: true
+  field_corso: true
+  field_data_di_licenza: true
+  field_data_di_nascita: true
+  field_data_laurea: true
+  field_facolta: true
+  field_geo: true
+  field_nome: true
+  field_provenienza: true
+  field_revisore: true
+  field_segnatura_archivistica_lau: true
+  field_segnatura_archivistica_tes: true
+  field_titolo_tesi_laurea: true
+  field_titolo_tesi_licenza: true
+  field_votazione_laurea: true
+  langcode: true
+  search_api_excerpt: true

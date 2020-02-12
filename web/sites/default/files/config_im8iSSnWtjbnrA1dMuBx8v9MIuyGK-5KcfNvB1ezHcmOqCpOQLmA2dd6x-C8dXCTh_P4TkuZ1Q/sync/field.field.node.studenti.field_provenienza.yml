@@ -1,0 +1,19 @@
+uuid: ddd964ea-9383-42be-bdc6-99d8e80bb333
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_provenienza
+    - node.type.studenti
+id: node.studenti.field_provenienza
+field_name: field_provenienza
+entity_type: node
+bundle: studenti
+label: Provenienza
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

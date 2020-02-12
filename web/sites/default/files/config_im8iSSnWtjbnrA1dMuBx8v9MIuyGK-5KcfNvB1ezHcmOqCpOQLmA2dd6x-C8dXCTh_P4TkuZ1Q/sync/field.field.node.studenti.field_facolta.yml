@@ -1,0 +1,19 @@
+uuid: 46dc8e41-8a33-4431-9b93-e74877c6ddcc
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_facolta
+    - node.type.studenti
+id: node.studenti.field_facolta
+field_name: field_facolta
+entity_type: node
+bundle: studenti
+label: Facoltà
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

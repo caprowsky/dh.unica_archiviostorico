@@ -1,0 +1,11 @@
+uuid: 00df3f14-9adf-4186-b4f6-59b4a8bb60b5
+langcode: it
+status: true
+dependencies:
+  config:
+    - node.type.studenti
+id: node.studenti
+target_entity_type_id: node
+target_bundle: studenti
+default_langcode: site_default
+language_alterable: false

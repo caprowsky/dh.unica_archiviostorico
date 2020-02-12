@@ -1,0 +1,21 @@
+uuid: 354606cf-4426-4cf2-a844-03ee08b9a705
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_titolo_tesi_licenza
+    - node.type.studenti
+  module:
+    - text
+id: node.studenti.field_titolo_tesi_licenza
+field_name: field_titolo_tesi_licenza
+entity_type: node
+bundle: studenti
+label: 'Titolo tesi di licenza'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
