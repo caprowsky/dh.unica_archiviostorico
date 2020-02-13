@@ -13,6 +13,8 @@ services:
     volumes:
       - ./mariadb-init:/docker-entrypoint-initdb.d # Place init .sql file(s) here.
 #      - /path/to/mariadb/data/on/host:/var/lib/mysql # Use bind mount
+    networks:
+      - back
 
   php:
     image: wodby/drupal-php:$PHP_TAG
@@ -45,6 +47,10 @@ services:
 #      SIMPLETEST_DB: "${DB_DRIVER}://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}#tests_"
 #      MINK_DRIVER_ARGS_WEBDRIVER: '["chrome", {"browserName":"chrome","goog:chromeOptions":{"args":["--disable-gpu","--headless"]}}, "http://chrome:9515"]'
 
+    networks:
+      - middle
+      - back
+
     volumes:
       - ./:/var/www/html
 ## For macOS users (https://wodby.com/docs/stacks/drupal/local#docker-for-mac)
@@ -74,6 +80,9 @@ services:
       - "traefik.http.routers.${PROJECT_NAME}_nginx.rule=Host(`${PROJECT_BASE_URL}`)"
     ports:
       - "8000:80"
+    networks:
+      - front
+      - middle
 
   mailhog:
     image: mailhog/mailhog
@@ -155,7 +164,15 @@ services:
       - "traefik.http.routers.${PROJECT_NAME}_pma.rule=Host(`pma.${PROJECT_BASE_URL}`)"
     ports:
       - "5000:80"
+    networks:
+      - front
+      - middle
+      - back
 
+networks:
+  front:
+  middle:
+  back:
 
 #  solr:
 #    image: wodby/solr:$SOLR_TAG
