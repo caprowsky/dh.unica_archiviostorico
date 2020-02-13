@@ -1,0 +1,23 @@
+uuid: 2f8fa182-d8cd-400d-831b-8c7a0f2d1546
+langcode: it
+status: true
+dependencies:
+  config:
+    - facets.facet.provenienza
+  module:
+    - facets
+  theme:
+    - si8
+id: si8_provenienza
+theme: si8
+region: sidebar_second
+weight: -8
+provider: null
+plugin: 'facet_block:provenienza'
+settings:
+  id: 'facet_block:provenienza'
+  label: Provenienza
+  provider: facets
+  label_display: visible
+  block_id: provenienza
+visibility: {  }

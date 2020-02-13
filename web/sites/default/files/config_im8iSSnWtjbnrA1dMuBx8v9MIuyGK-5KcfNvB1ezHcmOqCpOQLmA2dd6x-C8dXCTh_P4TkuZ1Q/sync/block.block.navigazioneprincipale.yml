@@ -1,0 +1,25 @@
+uuid: 19074673-af93-48d3-9e8a-88840963b807
+langcode: it
+status: false
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - seven
+id: navigazioneprincipale
+theme: seven
+region: highlighted
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Navigazione principale'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

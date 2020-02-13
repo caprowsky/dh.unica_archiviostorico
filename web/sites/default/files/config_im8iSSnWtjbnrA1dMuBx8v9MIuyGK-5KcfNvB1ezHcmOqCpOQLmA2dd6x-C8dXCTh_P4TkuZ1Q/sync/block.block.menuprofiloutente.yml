@@ -1,0 +1,25 @@
+uuid: 05b8e37e-10fb-47fe-99a9-a4765a89280a
+langcode: it
+status: false
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - seven
+id: menuprofiloutente
+theme: seven
+region: highlighted
+weight: -4
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'Menu profilo utente'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

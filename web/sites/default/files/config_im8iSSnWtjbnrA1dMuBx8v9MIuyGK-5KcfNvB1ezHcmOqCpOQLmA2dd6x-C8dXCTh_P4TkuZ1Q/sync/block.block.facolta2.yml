@@ -1,0 +1,23 @@
+uuid: 0d79d077-6204-4129-8cd1-e6c1749c2945
+langcode: it
+status: true
+dependencies:
+  config:
+    - facets.facet.facolta2
+  module:
+    - facets
+  theme:
+    - bartik
+id: facolta2
+theme: bartik
+region: sidebar_second
+weight: -7
+provider: null
+plugin: 'facet_block:facolta2'
+settings:
+  id: 'facet_block:facolta2'
+  label: Facoltà2
+  provider: facets
+  label_display: visible
+  block_id: facolta2
+visibility: {  }

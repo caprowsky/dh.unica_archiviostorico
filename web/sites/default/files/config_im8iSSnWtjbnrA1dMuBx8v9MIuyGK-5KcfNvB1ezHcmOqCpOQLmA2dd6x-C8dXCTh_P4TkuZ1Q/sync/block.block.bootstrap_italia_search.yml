@@ -1,0 +1,23 @@
+uuid: bb40a22b-650d-4efb-9173-f7d8caea98b5
+langcode: it
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - bootstrap_italia
+_core:
+  default_config_hash: Q-4EcGAsu26ICu4ejEz0uE1zv4akpiaOsizxgZfAmEw
+id: bootstrap_italia_search
+theme: bootstrap_italia
+region: disabled_blocks
+weight: -1
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Cerca
+  provider: search
+  label_display: visible
+  page_id: node_search
+visibility: {  }

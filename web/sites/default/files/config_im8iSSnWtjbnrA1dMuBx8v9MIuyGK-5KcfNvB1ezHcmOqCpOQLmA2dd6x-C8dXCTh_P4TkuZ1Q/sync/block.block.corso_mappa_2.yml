@@ -1,0 +1,23 @@
+uuid: d9ac02b1-b2f1-4dad-b71a-5d630dd893c9
+langcode: it
+status: true
+dependencies:
+  config:
+    - facets.facet.corso_2
+  module:
+    - facets
+  theme:
+    - bootstrap
+id: corso_mappa_2
+theme: bootstrap
+region: sidebar_second
+weight: -4
+provider: null
+plugin: 'facet_block:corso_2'
+settings:
+  id: 'facet_block:corso_2'
+  label: Corso_mappa_2
+  provider: facets
+  label_display: '0'
+  block_id: corso_mappa_2
+visibility: {  }

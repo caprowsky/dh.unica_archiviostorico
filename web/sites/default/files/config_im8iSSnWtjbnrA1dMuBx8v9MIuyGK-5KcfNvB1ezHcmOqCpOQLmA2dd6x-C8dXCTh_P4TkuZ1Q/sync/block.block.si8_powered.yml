@@ -1,0 +1,22 @@
+uuid: f7b82463-aa57-42d5-a5d8-2d9bb339a2a0
+langcode: it
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - si8
+_core:
+  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
+id: si8_powered
+theme: si8
+region: navigation
+weight: 10
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Realizzato con Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

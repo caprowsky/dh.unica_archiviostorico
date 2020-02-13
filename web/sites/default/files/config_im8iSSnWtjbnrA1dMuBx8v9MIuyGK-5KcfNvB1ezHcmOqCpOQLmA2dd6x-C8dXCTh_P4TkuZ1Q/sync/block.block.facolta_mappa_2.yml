@@ -1,0 +1,23 @@
+uuid: 67c03290-ad71-4118-9055-f48d3c57bb3a
+langcode: it
+status: true
+dependencies:
+  config:
+    - facets.facet.facolta_2
+  module:
+    - facets
+  theme:
+    - bootstrap
+id: facolta_mappa_2
+theme: bootstrap
+region: sidebar_second
+weight: -5
+provider: null
+plugin: 'facet_block:facolta_2'
+settings:
+  id: 'facet_block:facolta_2'
+  label: Facoltà_mappa_2
+  provider: facets
+  label_display: '0'
+  block_id: facolta_mappa_2
+visibility: {  }

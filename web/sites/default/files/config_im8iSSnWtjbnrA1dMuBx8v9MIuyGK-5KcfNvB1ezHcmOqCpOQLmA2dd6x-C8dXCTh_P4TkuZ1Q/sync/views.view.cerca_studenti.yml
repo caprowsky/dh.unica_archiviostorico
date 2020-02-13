@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_anno_immatricolazione
-    - field.storage.node.field_autore
     - field.storage.node.field_carriera
     - field.storage.node.field_cognome
     - field.storage.node.field_corso
@@ -15,7 +14,6 @@ dependencies:
     - field.storage.node.field_geo
     - field.storage.node.field_nome
     - field.storage.node.field_provenienza
-    - field.storage.node.field_revisore
     - field.storage.node.field_segnatura_archivistica_lau
     - field.storage.node.field_segnatura_archivistica_tes
     - field.storage.node.field_titolo_tesi_laurea
@@ -69,12 +67,17 @@ display:
           text_input_required: 'Seleziona qualsiasi filtro e clicca su Applica per visualizzare i risultati'
           text_input_required_format: basic_html
       pager:
-        type: mini
+        type: full
         options:
           items_per_page: 10
           offset: 0
           id: 0
           total_pages: null
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« Prima'
+            last: 'Ultima »'
           expose:
             items_per_page: false
             items_per_page_label: 'Voci per pagina'
@@ -83,11 +86,18 @@ display:
             items_per_page_options_all_label: '- Tutto -'
             offset: false
             offset_label: Scostamento
-          tags:
-            previous: ‹‹
-            next: ››
+          quantity: 9
       style:
-        type: default
+        type: grid
+        options:
+          grouping: {  }
+          columns: 3
+          automatic_width: true
+          alignment: vertical
+          col_class_default: true
+          col_class_custom: ''
+          row_class_default: true
+          row_class_custom: ''
       row:
         type: fields
         options:
@@ -104,6 +114,77 @@ display:
           group_type: group
           admin_label: ''
           label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: '<a href="/node/{{ nid }}">{{ field_cognome }} </a>'
+            make_link: false
+            path: '/node/{{ nid }}'
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: false
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+          entity_type: node
+          plugin_id: search_api_field
+        field_nome:
+          id: field_nome
+          table: search_api_datasource_studenti_entity_node
+          field: field_nome
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Nome
           exclude: false
           alter:
             alter_text: false
@@ -136,7 +217,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -167,77 +248,6 @@ display:
             multi_separator: ', '
           entity_type: node
           plugin_id: search_api_field
-        field_nome:
-          id: field_nome
-          table: search_api_datasource_studenti_entity_node
-          field: field_nome
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          field_rendering: true
-          fallback_handler: search_api
-          fallback_options:
-            link_to_item: false
-            use_highlighting: false
-            multi_type: separator
-            multi_separator: ', '
-          entity_type: node
-          plugin_id: search_api_field
         field_provenienza:
           id: field_provenienza
           table: search_api_datasource_studenti_entity_node
@@ -245,7 +255,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: Provenienza
           exclude: false
           alter:
             alter_text: false
@@ -278,7 +288,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -316,7 +326,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: 'Anno di immatricolazione'
           exclude: false
           alter:
             alter_text: false
@@ -349,7 +359,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -387,7 +397,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: Facoltà
           exclude: false
           alter:
             alter_text: false
@@ -420,7 +430,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -458,7 +468,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: Carriera
           exclude: false
           alter:
             alter_text: false
@@ -491,7 +501,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -528,7 +538,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: Corso
           exclude: false
           alter:
             alter_text: false
@@ -561,7 +571,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -599,7 +609,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: 'Titolo tesi di licenza'
           exclude: false
           alter:
             alter_text: false
@@ -632,7 +642,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -810,7 +820,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: 'Data di licenza'
           exclude: false
           alter:
             alter_text: false
@@ -843,7 +853,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -881,7 +891,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: 'Data di nascita'
           exclude: false
           alter:
             alter_text: false
@@ -914,7 +924,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -953,7 +963,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: 'Data di laurea'
           exclude: false
           alter:
             alter_text: false
@@ -986,149 +996,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          field_rendering: true
-          fallback_handler: search_api
-          fallback_options:
-            link_to_item: false
-            use_highlighting: false
-            multi_type: separator
-            multi_separator: ', '
-          entity_type: node
-          plugin_id: search_api_field
-        field_autore:
-          id: field_autore
-          table: search_api_datasource_studenti_entity_node
-          field: field_autore
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          field_rendering: true
-          fallback_handler: search_api
-          fallback_options:
-            link_to_item: false
-            use_highlighting: false
-            multi_type: separator
-            multi_separator: ', '
-          entity_type: node
-          plugin_id: search_api_field
-        field_revisore:
-          id: field_revisore
-          table: search_api_datasource_studenti_entity_node
-          field: field_revisore
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -1307,7 +1175,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: 'Coordinate geografiche'
           exclude: false
           alter:
             alter_text: false
@@ -1340,7 +1208,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -1349,9 +1217,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: geofield_default
+          type: geofield_latlon
           settings:
-            output_format: wkt
+            output_format: dms
             output_escape: 1
           group_column: value
           group_columns: {  }
@@ -1372,6 +1240,59 @@ display:
             multi_separator: ', '
           entity_type: node
           plugin_id: search_api_field
+        search_api_excerpt:
+          id: search_api_excerpt
+          table: search_api_index_studenti
+          field: search_api_excerpt
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Excerpt
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          use_highlighting: false
+          multi_type: separator
+          multi_separator: ', '
+          plugin_id: search_api
       filters:
         search_api_fulltext:
           id: search_api_fulltext
@@ -1386,7 +1307,7 @@ display:
           exposed: true
           expose:
             operator_id: search_api_fulltext_op
-            label: 'Fulltext search'
+            label: 'Cerca nell''archivio'
             description: ''
             use_operator: false
             operator: search_api_fulltext_op
@@ -1417,7 +1338,19 @@ display:
           min_length: null
           fields: {  }
           plugin_id: search_api_fulltext
-      sorts: {  }
+      sorts:
+        search_api_relevance:
+          id: search_api_relevance
+          table: search_api_index_studenti
+          field: search_api_relevance
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: search_api
       title: 'cerca studenti'
       header: {  }
       footer: {  }
@@ -1434,7 +1367,6 @@ display:
         - url.query_args
       tags:
         - 'config:field.storage.node.field_anno_immatricolazione'
-        - 'config:field.storage.node.field_autore'
         - 'config:field.storage.node.field_carriera'
         - 'config:field.storage.node.field_cognome'
         - 'config:field.storage.node.field_corso'
@@ -1445,7 +1377,6 @@ display:
         - 'config:field.storage.node.field_geo'
         - 'config:field.storage.node.field_nome'
         - 'config:field.storage.node.field_provenienza'
-        - 'config:field.storage.node.field_revisore'
         - 'config:field.storage.node.field_segnatura_archivistica_lau'
         - 'config:field.storage.node.field_segnatura_archivistica_tes'
         - 'config:field.storage.node.field_titolo_tesi_laurea'
@@ -1463,6 +1394,7 @@ display:
         type: normal
         title: 'Cerca studenticerca studenti'
         menu_name: main
+        enabled: false
       cache:
         type: none
       defaults:
@@ -1476,7 +1408,6 @@ display:
         - url.query_args
       tags:
         - 'config:field.storage.node.field_anno_immatricolazione'
-        - 'config:field.storage.node.field_autore'
         - 'config:field.storage.node.field_carriera'
         - 'config:field.storage.node.field_cognome'
         - 'config:field.storage.node.field_corso'
@@ -1487,7 +1418,6 @@ display:
         - 'config:field.storage.node.field_geo'
         - 'config:field.storage.node.field_nome'
         - 'config:field.storage.node.field_provenienza'
-        - 'config:field.storage.node.field_revisore'
         - 'config:field.storage.node.field_segnatura_archivistica_lau'
         - 'config:field.storage.node.field_segnatura_archivistica_tes'
         - 'config:field.storage.node.field_titolo_tesi_laurea'
@@ -1506,7 +1436,7 @@ display:
           grouping: {  }
           data_source: field_geo
           entity_source: __base_table
-          name_field: field_nome
+          name_field: field_anno_immatricolazione
           description_field: field_provenienza
           view_mode: full
           leaflet_map: 'OSM Mapnik'
@@ -1558,6 +1488,9 @@ display:
               position: topright
               input_size: '25'
               providers:
+                freegeoip:
+                  checked: '1'
+                  weight: '0'
                 arcgisonline:
                   weight: '0'
                   checked: 0
@@ -1567,9 +1500,6 @@ display:
                 file:
                   weight: '0'
                   checked: 0
-                freegeoip:
-                  checked: '1'
-                  weight: '0'
                 gpxfile:
                   weight: '0'
                   checked: 0
@@ -1659,7 +1589,6 @@ display:
         - url.query_args
       tags:
         - 'config:field.storage.node.field_anno_immatricolazione'
-        - 'config:field.storage.node.field_autore'
         - 'config:field.storage.node.field_carriera'
         - 'config:field.storage.node.field_cognome'
         - 'config:field.storage.node.field_corso'
@@ -1670,7 +1599,6 @@ display:
         - 'config:field.storage.node.field_geo'
         - 'config:field.storage.node.field_nome'
         - 'config:field.storage.node.field_provenienza'
-        - 'config:field.storage.node.field_revisore'
         - 'config:field.storage.node.field_segnatura_archivistica_lau'
         - 'config:field.storage.node.field_segnatura_archivistica_tes'
         - 'config:field.storage.node.field_titolo_tesi_laurea'

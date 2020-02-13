@@ -10,7 +10,7 @@ dependencies:
 id: provenienza
 name: Provenienza
 url_alias: provenienza
-weight: 0
+weight: -2
 min_count: 1
 show_only_one_result: false
 field_identifier: field_provenienza
@@ -60,4 +60,4 @@ processor_configs:
     settings: {  }
 empty_behavior:
   behavior: none
-show_title: false
+show_title: true

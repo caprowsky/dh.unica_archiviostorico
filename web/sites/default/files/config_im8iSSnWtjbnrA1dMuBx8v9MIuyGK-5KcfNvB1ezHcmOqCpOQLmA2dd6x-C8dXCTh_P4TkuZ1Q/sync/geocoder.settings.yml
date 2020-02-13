@@ -11,9 +11,9 @@ plugins_options:
     username: ''
     locale: ''
   googlemaps:
-    apikey: ''
-    locale: ''
-    region: ''
+    apikey: AIzaSyAswcXZDR2JsWZ9WVZxTVK2_8gEI4Cl_qo
+    locale: Cagliari
+    region: Italy
     usessl: true
   googlemaps_business:
     clientId: ''

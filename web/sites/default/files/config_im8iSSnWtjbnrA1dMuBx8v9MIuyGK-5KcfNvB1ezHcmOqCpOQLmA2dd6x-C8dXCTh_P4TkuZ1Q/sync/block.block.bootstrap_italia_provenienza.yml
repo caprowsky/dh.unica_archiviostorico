@@ -1,0 +1,23 @@
+uuid: 30ec5a2c-bfbd-4d71-b89a-f9f44c538803
+langcode: it
+status: true
+dependencies:
+  config:
+    - facets.facet.provenienza
+  module:
+    - facets
+  theme:
+    - bootstrap_italia
+id: bootstrap_italia_provenienza
+theme: bootstrap_italia
+region: disabled_blocks
+weight: -8
+provider: null
+plugin: 'facet_block:provenienza'
+settings:
+  id: 'facet_block:provenienza'
+  label: Provenienza
+  provider: facets
+  label_display: visible
+  block_id: provenienza
+visibility: {  }

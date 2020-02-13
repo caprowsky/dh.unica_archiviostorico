@@ -1,0 +1,72 @@
+uuid: 7676cfcc-e4f4-4499-a118-dc0944a24cb3
+langcode: it
+status: true
+dependencies:
+  config:
+    - search_api.index.studenti
+    - views.view.cerca_studenti
+  module:
+    - search_api
+id: facolta2
+name: Facoltà
+url_alias: facolta2
+weight: -1
+min_count: 1
+show_only_one_result: false
+field_identifier: field_facolta_1
+facet_source_id: 'search_api:views_page__cerca_studenti__page_1'
+widget:
+  type: dropdown
+  config:
+    show_numbers: true
+    default_option_label: Choose
+query_operator: or
+use_hierarchy: false
+expand_hierarchy: false
+enable_parent_when_child_gets_disabled: true
+hard_limit: 0
+exclude: false
+only_visible_when_facet_source_is_visible: true
+processor_configs:
+  active_widget_order:
+    processor_id: active_widget_order
+    weights:
+      sort: 20
+    settings:
+      sort: DESC
+  count_widget_order:
+    processor_id: count_widget_order
+    weights:
+      sort: 30
+    settings:
+      sort: DESC
+  dependent_processor:
+    processor_id: dependent_processor
+    weights:
+      build: 5
+    settings:
+      corso2:
+        enable: false
+        condition: null
+        values: ''
+        negate: false
+      provenienza:
+        enable: true
+        condition: presence
+        values: ''
+        negate: false
+  display_value_widget_order:
+    processor_id: display_value_widget_order
+    weights:
+      sort: 40
+    settings:
+      sort: ASC
+  url_processor_handler:
+    processor_id: url_processor_handler
+    weights:
+      pre_query: 50
+      build: 15
+    settings: {  }
+empty_behavior:
+  behavior: none
+show_title: true

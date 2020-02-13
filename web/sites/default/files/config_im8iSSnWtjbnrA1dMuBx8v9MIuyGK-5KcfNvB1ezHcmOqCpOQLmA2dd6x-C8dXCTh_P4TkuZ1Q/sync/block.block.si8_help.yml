@@ -1,0 +1,22 @@
+uuid: 445931b5-10d6-423a-a28b-bf9c350477ff
+langcode: it
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - si8
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: si8_help
+theme: si8
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

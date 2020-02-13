@@ -1,0 +1,20 @@
+uuid: dd61b854-e8ac-4a8e-832f-13aedb68f795
+langcode: it
+status: true
+dependencies:
+  theme:
+    - si8
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: si8_page_title
+theme: si8
+region: content
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

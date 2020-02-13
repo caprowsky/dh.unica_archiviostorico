@@ -9,12 +9,12 @@ _core:
 id: seven_page_title
 theme: seven
 region: header
-weight: -30
+weight: -5
 provider: null
 plugin: page_title_block
 settings:
   id: page_title_block
-  label: 'Titolo della pagina'
+  label: 'Page title'
   provider: core
   label_display: '0'
 visibility: {  }

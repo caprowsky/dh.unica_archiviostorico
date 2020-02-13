@@ -1,0 +1,23 @@
+uuid: 6bc00991-7585-442b-be98-d2d9a26eac9a
+langcode: it
+status: true
+dependencies:
+  config:
+    - facets.facet.corso2
+  module:
+    - facets
+  theme:
+    - bootstrap
+id: corso2
+theme: bootstrap
+region: sidebar_second
+weight: -6
+provider: null
+plugin: 'facet_block:corso2'
+settings:
+  id: 'facet_block:corso2'
+  label: Corso
+  provider: facets
+  label_display: '0'
+  block_id: corso2
+visibility: {  }

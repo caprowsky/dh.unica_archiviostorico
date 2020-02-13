@@ -1,0 +1,22 @@
+uuid: d04bf225-208c-4233-b461-2fb37c32f018
+langcode: it
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - si8
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: si8_messages
+theme: si8
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

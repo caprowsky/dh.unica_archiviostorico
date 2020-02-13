@@ -1,0 +1,23 @@
+uuid: d9ea89e2-55af-4d6b-ac21-57dd83a368ba
+langcode: it
+status: true
+dependencies:
+  config:
+    - facets.facet.facolta2
+  module:
+    - facets
+  theme:
+    - bootstrap_italia
+id: bootstrap_italia_facolta2
+theme: bootstrap_italia
+region: disabled_blocks
+weight: 0
+provider: null
+plugin: 'facet_block:facolta2'
+settings:
+  id: 'facet_block:facolta2'
+  label: Facoltà2
+  provider: facets
+  label_display: visible
+  block_id: facolta2
+visibility: {  }

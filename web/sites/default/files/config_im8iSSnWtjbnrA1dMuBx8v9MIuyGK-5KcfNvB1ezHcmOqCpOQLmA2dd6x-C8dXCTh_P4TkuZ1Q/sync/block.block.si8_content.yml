@@ -1,0 +1,22 @@
+uuid: d97b342b-2441-4939-9816-6eac1079e4d0
+langcode: it
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - si8
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: si8_content
+theme: si8
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -23,14 +23,29 @@ dependencies:
     - field.storage.node.field_votazione_laurea
     - search_api.server.studenti
   module:
-    - search_api
     - node
     - path_alias
+    - search_api
 id: studenti
 name: studenti
 description: ''
 read_only: false
 field_settings:
+  aggregated_field:
+    label: 'Aggregated field'
+    property_path: aggregated_field
+    type: text
+    configuration:
+      type: union
+      fields: {  }
+  alias:
+    label: 'Alias URL'
+    datasource_id: 'entity:path_alias'
+    property_path: alias
+    type: text
+    dependencies:
+      module:
+        - path_alias
   field_anno_immatricolazione:
     label: 'Anno immatricolazione'
     datasource_id: 'entity:node'
@@ -71,6 +86,14 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_corso
+  field_corso_1:
+    label: Corso_2
+    datasource_id: 'entity:node'
+    property_path: field_corso
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_corso
   field_data_di_licenza:
     label: 'Data di licenza'
     datasource_id: 'entity:node'
@@ -100,6 +123,14 @@ field_settings:
     datasource_id: 'entity:node'
     property_path: field_facolta
     type: text
+    dependencies:
+      config:
+        - field.storage.node.field_facolta
+  field_facolta_1:
+    label: Facoltà_2
+    datasource_id: 'entity:node'
+    property_path: field_facolta
+    type: string
     dependencies:
       config:
         - field.storage.node.field_facolta
@@ -175,10 +206,22 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_votazione_laurea
-  url:
-    label: URI
-    property_path: search_api_url
+  nid:
+    label: ID
+    datasource_id: 'entity:node'
+    property_path: nid
+    type: integer
+    dependencies:
+      module:
+        - node
+  path:
+    label: 'System path'
+    datasource_id: 'entity:path_alias'
+    property_path: path
     type: text
+    dependencies:
+      module:
+        - path_alias
 datasource_settings:
   'entity:node':
     bundles:
@@ -243,5 +286,5 @@ tracker_settings:
     indexing_order: fifo
 options:
   index_directly: true
-  cron_limit: 50
+  cron_limit: 500
 server: studenti

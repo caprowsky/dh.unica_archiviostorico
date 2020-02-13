@@ -1,0 +1,25 @@
+uuid: e3b20107-cd17-490c-a7b1-bbd985c8a2f2
+langcode: it
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - si8
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: si8_branding
+theme: si8
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Branding del sito'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }
